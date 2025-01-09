@@ -72,9 +72,10 @@ function PostPage() {
 
   // Funzione per gestire eliminazione dei posts 
   const handleDelete = (idToDelete) => {
+    const newArray = articles.filter((curItem) => curItem.id !== idToDelete);
+    setArticles(newArray)
     axios.delete(`${apiUrl}/posts/${idToDelete}`).then((resp) => {
-      const newArray = articles.filter((curItem) => curItem.id !== idToDelete);
-      setArticles(newArray);
+      ;
     });
   };
 
@@ -93,7 +94,7 @@ function PostPage() {
 
       <section>
           <select name="tag" value={filter} onChange={(event)=> setFilter(event.target.value)}>
-            <option value="all">Tutti i Tags</option>
+            <option value="all">Tutte le Ricette</option>
            {tags && tags.map((curTag, index) => <option key={index} value={curTag}>{curTag}</option>)}
           </select>
         </section> 

@@ -1,8 +1,8 @@
-function HomePage () {
+function HomePage() {
 
-    return(
-        <main>
-        
+    return (
+        <main className="text-center" >
+            <h1>Scopri tutte le Ricette</h1>
         </main>
     )
 }

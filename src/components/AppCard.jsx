@@ -11,14 +11,15 @@ export const AppCard = ({ post, onDelete }) => {
                     <img src={`${apiUrl}/${post.immagine}`} />
                     <span>{post.tags.join('-')}</span>
                 </div>
-            </div>
-            <div>
-                <button
-                    onClick={onDelete}
-                    className="btn btn-warning"
-                >
-                    <i className="fas fa-trash-alt"></i>
-                </button>
+
+                <div>
+                    <button
+                        onClick={onDelete}
+                        className="btn btn-danger m-2"
+                    >
+                        <i className="fas fa-trash-alt"></i>
+                    </button>
+                </div>
             </div>
         </>
     )
