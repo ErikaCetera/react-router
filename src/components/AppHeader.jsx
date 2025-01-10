@@ -9,6 +9,7 @@ function AppHeader() {
             path: "/posts",
             title: "Posts Page"
         }
+        
     ];
     return (
         <header className="bg-light text-center">

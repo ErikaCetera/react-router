@@ -2,7 +2,7 @@ export const AppForm = ({form, handleInputChange, handleSubmit}) => {
 
     return (
         <>
-            <form onSubmit={handleSubmit} >
+            <form  onSubmit={handleSubmit} >
 
                 {/* //TITOLO*/}
                 <div className='mb-3'>

@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
-import HomePage from "./components/HomePage";
-import PostPage from "./components/PostPage";
+import HomePage from "./pages/HomePage";
+import PostPage from "./pages/PostPage";
+import CreatePage from "./pages/CreatePage";
 
 function App() {
   return (
@@ -9,11 +10,14 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route element={<AppLayout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/posts" element={<PostPage />} />
-          </Route>
+            <Route index element={<HomePage />} />
+              <Route path="/posts" >
+              <Route index element={<PostPage />} />
+              <Route path="create" element={<CreatePage />} />
+            </Route>
+         </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter >
     </>
   );
 }
