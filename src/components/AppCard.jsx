@@ -1,6 +1,8 @@
+import { Link } from "react-router-dom";
 const apiUrl = import.meta.env.VITE_API_URL;
 
 export const AppCard = ({ post, onDelete }) => {
+
 
     return (
         <>
@@ -19,6 +21,9 @@ export const AppCard = ({ post, onDelete }) => {
                     >
                         <i className="fas fa-trash-alt"></i>
                     </button>
+                    <Link className="btn btn-success" to={`/posts/${post.id}`}>
+                        Leggi ricetta
+                    </Link>
                 </div>
             </div>
         </>

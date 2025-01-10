@@ -7,8 +7,9 @@ function AppHeader() {
         },
         {
             path: "/posts",
-            title: "Posts Page"
+            title: "Ricette"
         }
+        
         
     ];
     return (

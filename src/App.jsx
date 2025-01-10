@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import AppLayout from "./components/AppLayout";
 import HomePage from "./pages/HomePage";
-import PostPage from "./pages/PostPage";
-import CreatePage from "./pages/CreatePage";
+import PostPage from "./pages/post/PostPage";
+import CreatePage from "./pages/post/CreatePage";
+import ShowPage from "./pages/post/ShowPage";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
               <Route path="/posts" >
               <Route index element={<PostPage />} />
               <Route path="create" element={<CreatePage />} />
+              <Route path=":id" element={<ShowPage />} />
             </Route>
          </Route>
         </Routes>

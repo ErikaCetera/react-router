@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import axios from 'axios'
-import { AppForm } from '../components/AppForm';
+import { AppForm } from '../../components/AppForm';
 import { useNavigate } from 'react-router-dom';
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -8,7 +8,8 @@ const initialFormData = {
     titolo: "",
     contenuto: "",
     immagine: "",
-    tags: []
+    tags: [],
+
   };
 
 
@@ -17,6 +18,7 @@ function CreatePage(){
     const [formData, setFormData] = useState(initialFormData);
     const [articles, setArticles] = useState([]);
     const navigate = useNavigate();
+    
 
      // Funzione per gestire il cambiamento del valore dell'input
       const handleInputChange = (event) => {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { AppCard } from '../components/AppCard';
+import { AppCard } from '../../components/AppCard';
 import { Link } from "react-router-dom";
 
 const apiUrl = import.meta.env.VITE_API_URL;
