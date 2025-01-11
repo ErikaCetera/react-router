@@ -5,13 +5,14 @@ import { Link } from "react-router-dom";
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
+
+
 function PostPage() {
 
   //Variabili di stato 
   const [articles, setArticles] = useState([]);
   const [tags, setTags] = useState([]);
   const [filter, setFilter] = useState("all");
-
 
 
   //Mostra i posts all'avvio della pagina
@@ -39,13 +40,13 @@ function PostPage() {
       ;
     });
   };
-  
- //Mostra i tag all'avvio della pagina
+
+  //Mostra i tag all'avvio della pagina
   useEffect(() => {
     getTags()
   }, [])
 
- //Funzione per prelevare lista dei tag dal server
+  //Funzione per prelevare lista dei tag dal server
   const getTags = () => {
     axios.get(`${apiUrl}/tags`).then((resp) => {
       setTags(resp.data.tags)

@@ -56,6 +56,13 @@ function CreatePage(){
     return(
 
         <section className= "m-5">
+          <button className="btn btn-light my-3"
+         onClick={() => {
+           navigate(-1);
+         }}
+       >
+         Indietro
+       </button >
           <div className='row w-50'>
             <h3 className='mb-3'>Aggiungi qui la tua Ricetta</h3>
             <AppForm
